@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/juego-memoria-react/', 
+  base: '/Juego-Memoria-React/', 
   plugins: [react()],
 })
