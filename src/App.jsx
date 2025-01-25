@@ -1,15 +1,19 @@
 import { useState , useEffect } from 'react';
 import './App.css';
+import paisaje01 from './assets/images/paisaje01.webp';
+import paisaje02 from './assets/images/paisaje02.webp';
+import paisaje03 from './assets/images/paisaje03.webp';
+import paisaje04 from './assets/images/paisaje04.webp';
+import dorso from './assets/images/dorso.webp'; 
 
 function App() {
 
   const cards = [
-    { id: 1, imageSrc: '/images/paisaje01.webp', dorso: '/images/dorso.webp', flipped: true },
-    { id: 2, imageSrc: '/images/paisaje02.webp', dorso: '/images/dorso.webp', flipped: true  },
-    { id: 3, imageSrc: '/images/paisaje03.webp', dorso: '/images/dorso.webp', flipped: true  },
-    { id: 4, imageSrc: '/images/paisaje04.webp', dorso: '/images/dorso.webp', flipped: true  },
+    { id: 1, imageSrc: paisaje01, dorso: dorso, flipped: true },
+    { id: 2, imageSrc: paisaje02, dorso: dorso, flipped: true },
+    { id: 3, imageSrc: paisaje03, dorso: dorso, flipped: true },
+    { id: 4, imageSrc: paisaje04, dorso: dorso, flipped: true },
   ];
-
   // Crear las cartas duplicadas y mezclarlas
   const duplicatedCards = [...cards];
   const shuffledCards = [...cards, ...duplicatedCards].sort(() => 0.5 - Math.random());
@@ -93,7 +97,6 @@ function App() {
             <div className={`card ${card.hidden ? "hidden" : ''}`} key={index}>
               <a href="#" onClick={() => handleCardClick(index)}>
                 <img src={card.flipped ? card.imageSrc : card.dorso} alt={`Paisaje ${card.id}`} />
-                <p>{card.id}</p> {/* Si el ID coincide, son parejas */}
               </a>
             </div>
           ))
