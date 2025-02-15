@@ -102,11 +102,12 @@ function App() {
           ))
         }
       </div>
-
+      {/*
       <div className="buttons">
         <button id="btnStart" name="Empezar partida">Empezar partida</button>
         <button id="btnRestart" name="Reiniciar partida">Reiniciar partida</button>
       </div>
+      */}
     </>
   );
 }

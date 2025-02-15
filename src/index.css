@@ -14,7 +14,7 @@
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 a {
